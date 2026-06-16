@@ -12,7 +12,7 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             refresh: true,
             fonts: [
-                bunny('Instrument Sans', {
+                bunny('Roboto', {
                     weights: [400, 500, 600],
                 }),
             ],
@@ -23,15 +23,13 @@ export default defineConfig({
                 plugins: ['babel-plugin-react-compiler'],
             },
         }),
-        wayfinder({
-            formVariants: true,
-        }),
+        wayfinder(),
     ],
     server: {
-        host: "www.localhost.com",
+        host: "localhost.com",
         port: 5173,
         strictPort: true,
         // origin: `${import.meta.env.VITE_APP_DOMAIN.replace(/:\d+$/, "")}:5173`,
-        cors: { origin: /^https?:\/\/([A-Za-z0-9-.]+)?(aqademic|localhost)(\.com)?(?::\d+)?$/ }
+        cors: { origin: /^https?:\/\/([A-Za-z0-9-.]+)?localhost(\.com)?(?::\d+)?$/ }
     }
 });

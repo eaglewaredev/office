@@ -5,19 +5,18 @@ const defaultTheme = createTheme();
 const customShadows: Shadows = [...defaultTheme.shadows];
 
 export const brand = {
-  15: 'hsl(303, 126%, 98%)',
-  25: 'hsl(303, 73%, 93%)',
-  50: 'hsl(303, 91%, 95%)',
-  100: 'hsl(300, 76%, 69%)',
-  200: 'hsl(299, 60%, 55%)',
-  300: 'hsl(299, 50%, 44%)',
-  400: 'hsl(299, 51%, 33%)',
-  500: 'hsl(299, 55%, 23%)',
-  600: 'hsl(299, 55%, 23%)',
-  700: 'hsl(299, 63%, 13%)',
-  800: 'hsl(299, 78%, 5%)',
-  900: 'hsl(293, 99%, 4%)',
+  50: 'hsl(210, 100%, 95%)',
+  100: 'hsl(210, 100%, 92%)',
+  200: 'hsl(210, 100%, 80%)',
+  300: 'hsl(210, 100%, 65%)',
+  400: 'hsl(210, 98%, 48%)',
+  500: 'hsl(210, 98%, 42%)',
+  600: 'hsl(210, 98%, 55%)',
+  700: 'hsl(210, 100%, 35%)',
+  800: 'hsl(210, 100%, 16%)',
+  900: 'hsl(210, 100%, 21%)',
 };
+
 
 export const gray = {
   50: 'hsl(220, 35%, 97%)',
@@ -159,7 +158,7 @@ export  const getDesignTokens = (mode: PaletteMode) => {
         },
       },
       typography: {
-        fontFamily: 'Geist',
+        fontFamily: 'Roboto',
         h1: {
           fontSize: defaultTheme.typography.pxToRem(48),
           fontWeight: 600,
@@ -247,7 +246,7 @@ export const colorSchemes = {
       grey: {
         ...gray,
       },
-      divider: alpha(brand[25], 0.4),
+      divider: alpha(brand[50], 0.4),
       background: {
         default: 'hsl(0, 0%, 99%)',
         paper: 'hsl(220, 35%, 97%)',
@@ -317,7 +316,7 @@ export const colorSchemes = {
 };
 
 export const typography = {
-    fontFamily: 'Geist',
+    fontFamily: 'Roboto',
     h1: {
     fontSize: defaultTheme.typography.pxToRem(48),
     fontWeight: 600,
