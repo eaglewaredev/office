@@ -18,4 +18,8 @@ class Staff extends Authenticatable
     function quotes(): HasMany {
         return $this->hasMany(Quote::class);
     }
+
+    function invoices(): HasMany {
+        return $this->hasMany(Invoice::class);
+    }
 }

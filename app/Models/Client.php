@@ -10,4 +10,10 @@ class Client extends Model
     function quotations(): HasMany{
         return $this->hasMany(Quotation::class);
     }
+
+    function invoices(): HasMany {
+        return $this->hasMany(Invoice::class);
+    }
+
+
 }
