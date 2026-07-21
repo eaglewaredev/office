@@ -1,8 +1,10 @@
+import ClientController from '@/wayfinder/App/Http/Controllers/ClientController';
 import DashboardController from '@/wayfinder/App/Http/Controllers/DashboardController';
 import StaffController from '@/wayfinder/App/Http/Controllers/StaffController';
+import quotation from '@/wayfinder/routes/quotation';
 import styled from '@emotion/styled';
 import { Link } from '@inertiajs/react';
-import { AccountCircleOutlined, Inventory } from '@mui/icons-material';
+import { AccountBox, AccountBoxOutlined, AccountCircleOutlined, Inventory } from '@mui/icons-material';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
@@ -129,15 +131,30 @@ export default function MenuContent({
                 </ListItem>
 
                 <ListItem>
-                    <ListItemButton >
-                    <ShoppingCartRoundedIcon />
+                    <ListItemButton
+                    LinkComponent={Link}
+                    href={ClientController.index().url}
+                    selected={menu == 'Clients'} >
+                    <AccountBoxOutlined />
                     <ListItemText>
-                        <Typography >Orders</Typography>
+                        <Typography >Clients</Typography>
                     </ListItemText>
                     </ListItemButton>
                 </ListItem>
 
+                <ListItem>
+                    <ListItemButton
+                    LinkComponent={Link}
+                    href={quotation.list().url}
+                    selected={menu == 'Quotations'} >
+                    <AccountBoxOutlined />
+                    <ListItemText>
+                        <Typography >Quotations</Typography>
+                    </ListItemText>
+                    </ListItemButton>
+                </ListItem>
 
+{/*
             <ListItem>
                 <ListItemButton
                 role="menuitem"
@@ -150,7 +167,7 @@ export default function MenuContent({
                 </ListItemText>
                 <Chip size="small" color="primary" label="6" />
                 </ListItemButton>
-            </ListItem>
+            </ListItem> */}
             <ListItem sx={{display: 'flex', flexDirection: 'column'}}>
                 <Toggler
                 defaultExpanded={menu == 'Settings'}

@@ -1,7 +1,7 @@
 import LoginCard from "@/components/LoginCard";
 import LoginContainer from "@/components/LoginContainer";
 import ThemeToggle from "@/components/ThemeToggle";
-import LoginController from "@/wayfinder/App/Http/Controllers/admin/LoginController";
+import LoginController from "@/wayfinder/App/Http/Controllers/LoginController";
 import { Form, Link, setLayoutProps, useForm } from "@inertiajs/react";
 import { CheckBox, ChevronLeftOutlined, VisibilityOffOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { Box, Button, FormControl, FormControlLabel, FormLabel, IconButton, InputAdornment, Stack, TextField, Typography } from "@mui/material";
