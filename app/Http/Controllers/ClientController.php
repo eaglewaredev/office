@@ -38,7 +38,7 @@ class ClientController extends Controller
 
         if($client->save()){
             Inertia::flash('success', 'Cliet created successfully');
-            return redirect('client.show', ['ref'=>$client->ref_no]);
+            return to_route('client.show', ['ref'=>$client->ref_no]);
         }
         throw ValidationException::withMessages(['name'=>'Something went wrong']);
     }

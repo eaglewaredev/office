@@ -148,7 +148,7 @@ export default function Index({
                             value={data.contactPerson}
                             error={errors.contactPerson ? true : false}
                             helperText={errors.contactPerson}
-                            onChange={(e)=>setData('contactPerson', e.target.value.toLocaleLowerCase())}
+                            onChange={(e)=>setData('contactPerson', e.target.value)}
                             slotProps={{
                                 inputLabel: {
                                     shrink: true,

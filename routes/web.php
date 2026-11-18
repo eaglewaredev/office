@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotationController;
 use App\Http\Controllers\StaffController;
@@ -73,6 +74,13 @@ Route::domain(config('app.domain'))->group(function () {
                 Route::post('show/{ref}/quote-item', [QuotationController::class, 'newQuoteItem'])->name('newQuoteItem');
                 Route::post('show/{ref}/quote-item/update', [QuotationController::class, 'updateQuoteItem'])->name('updateQuoteItem');
                 Route::post('show/{ref}/quote-item/delete', [QuotationController::class, 'deleteQuoteItem'])->name('deleteQuoteItem');
+            });
+        });
+
+        Route::name('invoice.')->group(function() {
+            Route::prefix('invoices')->group(function(){
+                Route::get('', [InvoiceController::class, 'index'])->name('index');
+                
             });
         });
     });

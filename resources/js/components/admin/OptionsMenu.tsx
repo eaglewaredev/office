@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import MenuButton from './MenuButton';
 import { Link } from '@inertiajs/react';
+import { logout } from '@/wayfinder/routes';
 
 const MenuItem = styled(MuiMenuItem)({
   margin: '2px 0',
@@ -63,7 +64,7 @@ export default function OptionsMenu() {
         <MenuItem
           onClick={handleClose}
           component={Link}
-          href={``}
+          href={`/logout`}
           sx={{
             [`& .${listItemIconClasses.root}`]: {
               ml: 'auto',

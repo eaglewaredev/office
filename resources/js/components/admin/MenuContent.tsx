@@ -4,7 +4,7 @@ import StaffController from '@/wayfinder/App/Http/Controllers/StaffController';
 import quotation from '@/wayfinder/routes/quotation';
 import styled from '@emotion/styled';
 import { Link } from '@inertiajs/react';
-import { AccountBox, AccountBoxOutlined, AccountCircleOutlined, Inventory } from '@mui/icons-material';
+import { AccountBox, AccountBoxOutlined, AccountCircleOutlined, Inventory, Receipt, Tag } from '@mui/icons-material';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
@@ -147,9 +147,31 @@ export default function MenuContent({
                     LinkComponent={Link}
                     href={quotation.list().url}
                     selected={menu == 'Quotations'} >
-                    <AccountBoxOutlined />
+                    <Tag />
                     <ListItemText>
                         <Typography >Quotations</Typography>
+                    </ListItemText>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem>
+                    <ListItemButton
+                    LinkComponent={Link}
+                    href={quotation.list().url}
+                    selected={menu == 'Invoices'} >
+                    <AccountBoxOutlined />
+                    <ListItemText>
+                        <Typography >Invoices</Typography>
+                    </ListItemText>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem>
+                    <ListItemButton
+                    LinkComponent={Link}
+                    href={quotation.list().url}
+                    selected={menu == 'Payments'} >
+                    <Receipt />
+                    <ListItemText>
+                        <Typography >Payments</Typography>
                     </ListItemText>
                     </ListItemButton>
                 </ListItem>

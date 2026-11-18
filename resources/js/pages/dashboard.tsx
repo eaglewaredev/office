@@ -48,6 +48,62 @@ export default function Index({
                         </CardContent>
                     </Card>
                 </FormGrid>
+                <FormGrid size={{xs: 12, md: 4}}>
+                    <Card
+                    sx={{p: 0}}
+                    >
+                        <CardContent
+                        sx={{p: 2}}
+                        >
+                            <Stack
+                            direction='row'
+                            sx={{
+                                justifyContent: 'space-between'
+                            }}
+                            >
+                                <Stack>
+                                    <Typography variant="h2">
+                                        Quotations
+                                    </Typography>
+                                    <Typography variant="h6">
+                                        {staffCount}
+                                    </Typography>
+                                </Stack>
+                                <AccountCircleOutlined
+                                sx={{fontSize: 70}}
+                                />
+                            </Stack>
+                        </CardContent>
+                    </Card>
+                </FormGrid>
+                <FormGrid size={{xs: 12, md: 4}}>
+                    <Card
+                    sx={{p: 0}}
+                    >
+                        <CardContent
+                        sx={{p: 2}}
+                        >
+                            <Stack
+                            direction='row'
+                            sx={{
+                                justifyContent: 'space-between'
+                            }}
+                            >
+                                <Stack>
+                                    <Typography variant="h2">
+                                        Invoices
+                                    </Typography>
+                                    <Typography variant="h6">
+                                        {staffCount}
+                                    </Typography>
+                                </Stack>
+                                <AccountCircleOutlined
+                                sx={{fontSize: 70}}
+                                />
+                            </Stack>
+                        </CardContent>
+                    </Card>
+                </FormGrid>
             </Grid>
             <Toolbar/>
         </Container>
